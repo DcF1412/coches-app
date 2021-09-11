@@ -1,0 +1,12 @@
+@import "../node_modules/@angular/material/theming";
+@include mat-core();
+
+
+$appcoches-primary: mat-palette($mat-blue);
+$appcoches-accent: mat-palette($mat-light-green);
+$appcoches-warn: mat-palette($mat-red);
+
+$appcoches-theme: mat-light-theme($appcoches-primary, $appcoches-accent, $appcoches-warn);
+@include angular-material-theme($appcoches-theme);
+
+

@@ -1,0 +1,13 @@
+.mat-toolbar-row {
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     align-items: flex-start;
+     place-content: space-evenly;
+}
+
+.mat-toolbar.mat-primary {
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+}

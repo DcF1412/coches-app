@@ -1,0 +1,170 @@
+<mat-card>
+    <mat-form-field appearance="fill">
+        <mat-label>Marcas</mat-label>
+        <mat-select  name="marcas" (selectionChange)="prueba($event)" [value]="0">  
+          <mat-option *ngFor="let marca of marcas" [value]="marca.value">
+            {{marca.title}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Modelo</mat-label>
+        <mat-select  name="modelos" [disabled]="modelsActive">
+          <mat-option *ngFor="let modelo of modelos" [value]="modelo.value">
+            {{modelo.value}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <h4>Precio</h4>
+      <mat-form-field appearance="fill">
+        <mat-label>Desde</mat-label>
+        <mat-select>
+          <mat-option value="1">Desde</mat-option>
+          <mat-option value="2">Desde 1000</mat-option>
+          <mat-option value="3">Desde 5000</mat-option>
+          <mat-option value="4">Desde 10000</mat-option>
+          <mat-option value="5">Desde 15000</mat-option>
+          <mat-option value="6">Desde 20000</mat-option>
+          <mat-option value="7">Desde 40000</mat-option>
+          <mat-option value="8">Desde 60000</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Hasta</mat-label>
+        <mat-select>
+          <mat-option value="1">Hasta</mat-option>
+          <mat-option value="2">Hasta 1000</mat-option>
+          <mat-option value="3">Hasta 10000</mat-option>
+          <mat-option value="4">Hasta 20000</mat-option>
+          <mat-option value="5">Hasta 30000</mat-option>
+          <mat-option value="6">Hasta 50000</mat-option>
+          <mat-option value="7">Hasta 100000</mat-option>
+          <mat-option value="8">Hasta 5000000</mat-option>
+          <mat-option value="9">Hasta 10000000</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <h4>Año</h4>
+      <mat-form-field appearance="fill">
+        <mat-label>Desde</mat-label>
+        <mat-select>
+          <mat-option value="1">Desde</mat-option>
+          <mat-option value="2">Desde 1920</mat-option>
+          <mat-option value="3">Desde 1950</mat-option>
+          <mat-option value="4">Desde 1970</mat-option>
+          <mat-option value="5">Desde 1980</mat-option>
+          <mat-option value="6">Desde 1990</mat-option>
+          <mat-option value="7">Desde 2000</mat-option>
+          <mat-option value="8">Desde 2005</mat-option>
+          <mat-option value="9">Desde 2010</mat-option>
+          <mat-option value="10">Desde 2015</mat-option>
+          <mat-option value="11">Desde 2018</mat-option>
+          <mat-option value="12">Desde 2019</mat-option>
+          <mat-option value="13">Desde 2020</mat-option>
+          <mat-option value="14">Desde 2021</mat-option>
+          
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Hasta</mat-label>
+        <mat-select>
+          <mat-option value="1">Hasta</mat-option>
+          <mat-option value="2">Hasta 1950</mat-option>
+          <mat-option value="3">Hasta 1970</mat-option>
+          <mat-option value="4">Hasta 1980</mat-option>
+          <mat-option value="5">Hasta 1990</mat-option>
+          <mat-option value="6">Hasta 2000</mat-option>
+          <mat-option value="7">Hasta 2005</mat-option>
+          <mat-option value="8">Hasta 2010</mat-option>
+          <mat-option value="9">Hasta 2018</mat-option>
+          <mat-option value="10">Hasta 2019</mat-option>
+          <mat-option value="11">Hasta 2020</mat-option>
+          <mat-option value="12">Hasta 2021</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <h4>KM</h4>
+      <mat-form-field appearance="fill">
+        <mat-label>Desde</mat-label>
+        <mat-select>
+          <mat-option value="1">Desde</mat-option>
+          <mat-option value="2">Desde 1000</mat-option>
+          <mat-option value="3">Desde 5000</mat-option>
+          <mat-option value="4">Desde 10000</mat-option>
+          <mat-option value="5">Desde 25000</mat-option>
+          <mat-option value="6">Desde 50000</mat-option>
+          <mat-option value="7">Desde 100000</mat-option>
+          <mat-option value="8">Desde 150000</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Hasta</mat-label>
+        <mat-select>
+          <mat-option value="1">Hasta</mat-option>
+          <mat-option value="2">Hasta 1000</mat-option>
+          <mat-option value="3">Hasta 5000</mat-option>
+          <mat-option value="4">Hasta 10000</mat-option>
+          <mat-option value="5">Hasta 25000</mat-option>
+          <mat-option value="6">Hasta 50000</mat-option>
+          <mat-option value="7">Hasta 100000</mat-option>
+          <mat-option value="8">Hasta 200000</mat-option>
+          <mat-option value="9">Hasta 800000</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <h4>Tipo de Cambio</h4>
+      <mat-form-field appearance="fill">
+        <mat-label>Cambio</mat-label>
+        <mat-select>
+          <mat-option value="1">Todos</mat-option>
+          <mat-option value="2">Automático</mat-option>
+          <mat-option value="3">Manual</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+
+      <mat-form-field appearance="fill">
+        <mat-label>Provincias</mat-label>
+        <mat-select [formControl]="provinces" multiple>
+          <mat-select-trigger>
+            {{provinces.value ? provinces.value[0] : ''}}
+            <span *ngIf="provinces.value?.length > 1" class="example-additional-selection">
+              (+{{provinces.value.length - 1}} {{provinces.value?.length === 2 ? 'other' : 'others'}})
+            </span>
+          </mat-select-trigger>
+          <mat-option *ngFor="let province of provinceList" [value]="province">{{province}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <h4>Tipo de Carrocería</h4>
+      <div fxLayout="row wrap" fxLayoutGap="20px grid">
+        
+        <div class="list">
+          <div class="item"><input type="checkbox" id="cb1" />
+            <label for="cb1"><img src="assets/images/berlina.png" /></label>
+          </div>
+          <div class="item"><input type="checkbox" id="cb2" />
+            <label for="cb2"><img src="assets/images/cabrio.png" /></label>
+          </div>
+          <div class="item"><input type="checkbox" id="cb3" />
+            <label for="cb3"><img src="assets/images/coupe.png" /></label>
+          </div>
+          <div class="item"><input type="checkbox" id="cb4" />
+            <label for="cb4"><img src="assets/images/familiar.png" /></label>
+          </div>
+          <div class="item"><input type="checkbox" id="cb5" />
+            <label for="cb5"><img src="assets/images/pick-up.png" /></label>
+          </div>
+          <div class="item"><input type="checkbox" id="cb6" />
+            <label for="cb6"><img src="assets/images/suv.png" /></label>
+          </div>
+        </div>
+      </div>
+      
+</mat-card>
+
